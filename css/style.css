@@ -13,14 +13,21 @@ body{
 .d-flex{
     display: flex;
 }
+.p-10{
+    padding: 10px;
+}
 /* CONTAINER */
 .container{
     width: 85%;
     height: 900px;
     margin:5% 10%;
 }
+/* ASIDE */
+.aside{
+    width:45%
+}
+/* HEADER-ASIDE */
 .header-aside{
-    width: 40%;
     height: 3.75rem;
     background-color: #eaeaea ;
     justify-content: space-between;
@@ -36,5 +43,42 @@ body{
     color: #b1b1b1;
     font-size: 1.25rem;
     margin-right: 0.625rem;
+}
 
+/* MAIN-ASIDE */
+.main-aside{
+    background-color: #fafafa;
+}
+.notification{
+    height: 60px;
+    background-color: #8edafc;
+
+}
+.notification-icon{
+    border-radius: 50%;
+    color: #8edafc;
+    background-color: #fff;
+    margin-right:0.625rem;
+}
+.chat-search{
+    height: 35px;
+    background-color: #fff;
+    margin:0.313rem;
+} 
+.chat-search i{
+    color: #b1b1b1;
+    padding: 2% 5%;
+}
+.chat-search input{
+    width: 90%;
+    border:none;
+}
+.recent-chats-container{
+    align-items: center;
+}
+.chat-avatar{
+    width: 15%;
+    margin: 0.313rem;
+    border-radius: 50%;
+    align-items:center;
 }
