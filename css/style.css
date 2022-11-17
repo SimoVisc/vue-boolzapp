@@ -13,9 +13,31 @@ body{
 .d-flex{
     display: flex;
 }
-.p-10{
-    padding: 10px;
+.j-end{
+    justify-content: end;
 }
+.p-10{
+    padding: 0.625rem;
+}
+.header-aside, .header-main{
+    height: 3.75rem;
+    background-color: #eaeaea ;
+    justify-content: space-between;
+    align-items:center;
+}
+.user-avatar img{
+    width: 35%;
+    border-radius: 50%;
+}
+.icons i{
+    color: #b1b1b1;
+    font-size: 1.25rem;
+    margin-right: 0.625rem;
+}
+.last-logon{
+    color: #b1b1b1;
+}
+
 /* CONTAINER */
 .container{
     width: 85%;
@@ -23,42 +45,34 @@ body{
     margin:5% 10%;
 }
 /* ASIDE */
-.aside{
-    width:45%
+aside{
+    width:40%;
+    height:100%
 }
 /* HEADER-ASIDE */
-.header-aside{
-    height: 3.75rem;
-    background-color: #eaeaea ;
-    justify-content: space-between;
-    align-items:center;
-}
 .user-avatar{
     width: 35%;
     margin: 0.313rem;
-    border-radius: 50%;
     align-items:center;
 }
-.user-icons i{
-    color: #b1b1b1;
-    font-size: 1.25rem;
-    margin-right: 0.625rem;
-}
-
 /* MAIN-ASIDE */
 .main-aside{
     background-color: #fafafa;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .notification{
     height: 60px;
     background-color: #8edafc;
-
 }
 .notification-icon{
     border-radius: 50%;
     color: #8edafc;
     background-color: #fff;
     margin-right:0.625rem;
+}
+.notification a{
+    color: gray;
 }
 .chat-search{
     height: 35px;
@@ -72,13 +86,58 @@ body{
 .chat-search input{
     width: 90%;
     border:none;
+    padding:0 0.625rem;
 }
 .recent-chats-container{
     align-items: center;
+    flex-grow: 1;
 }
 .chat-avatar{
     width: 15%;
     margin: 0.313rem;
     border-radius: 50%;
     align-items:center;
+}
+/* CHAT CONTAINER */
+.chat-container{
+    width: 60%;
+    height:100%
+}
+.name-chat{
+    width: 60%;
+    margin: 0.313rem;
+    align-items:center;
+}
+.name-chat img{
+    width:15%;
+    border-radius: 50% ;
+    margin-right: 0.625rem;
+}
+.chat{
+    background-image: url(../img/mine.jpg);
+    padding: 2.5rem;
+    flex-grow: 1;
+}
+ .message{
+    margin:0.625rem;
+    width: 50%;
+    border-radius: 0.625rem;
+} 
+.sent{
+    background-color: #d5f9ba;
+}
+.received{
+    background-color: #fff;
+}
+.chat-footer{
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3eeea;
+    padding: 0.625rem 2.5rem;
+}
+.chat-footer input{
+    width:80%;
+    border: none;
+    border-radius: 0.313rem;
+    padding: 0.313rem 0.625rem;
 }
