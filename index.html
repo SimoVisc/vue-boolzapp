@@ -19,7 +19,7 @@
     <title>Boolzapp</title>
 </head>
 <body>
-    <div class="container d-flex">
+    <div class=" container d-flex" id="app">
         <!-- ASIDE -->
         <aside>
             <!-- HEADER ASIDE -->
@@ -50,14 +50,11 @@
                  <i class="fa-solid fa-magnifying-glass"></i>
                  <input type="text" placeholder="Cerca o inizia una nuova chat">
               </div>
-              <div class="recent-chats-container">
-                  <div class="chat-avatar-container d-flex">
-                      <img class="chat-avatar" src="img/avatar_io.jpg" alt="me-avatar">
-                      <div class="text">
-                         <h3>Michele</h3>
-                         <p class="last-logon">Ultimo accesso oggi alle 12:00</p>
-                     </div>
-                  </div>
+              <div class="chatcase-container" >
+                    <div class="chat-avatar-container" v-for="contact in contacts">
+                        {{ contact.name}}
+                        <p class="last-logon">Ultimo accesso oggi alle 12:00</p>
+                 </div>
               </div>
            </div>
            <!-- MAIN ASIDE END -->

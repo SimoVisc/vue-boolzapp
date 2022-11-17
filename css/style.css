@@ -41,7 +41,7 @@ body{
 /* CONTAINER */
 .container{
     width: 85%;
-    height: 600px;
+    height: 700px;
     margin:5% 10%;
 }
 /* ASIDE */
@@ -60,7 +60,6 @@ aside{
     height: calc(100% - 60px);
     background-color: #fafafa;
     flex-direction: column;
-    justify-content: space-between;
 }
 .notification{
     height: 60px;
@@ -88,9 +87,6 @@ aside{
     width: 90%;
     border:none;
     padding:0 0.625rem;
-}
-.recent-chats-container{
-    flex-grow:1
 }
 .chat-avatar-container{
     height:60px;
@@ -120,7 +116,6 @@ aside{
     height: calc(100% - 100px);
     background-image: url(../img/mine.jpg);
     padding: 2.5rem;
-
 }
  .message{
     margin:0.625rem;
