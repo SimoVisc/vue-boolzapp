@@ -19,11 +19,11 @@ body{
 .p-10{
     padding: 0.625rem;
 }
-.header-aside, .header-main{
-    height: 60px;
-    background-color: #eaeaea ;
+.header-c-left, .header-c-right{
+    height:60px;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
+    background-color:#eaeaea ;
 }
 .user-avatar img{
     width: 35%;
@@ -38,25 +38,24 @@ body{
     color: #b1b1b1;
 }
 
-/* CONTAINER */
-.container{
+/* MAIN CONTAINER */
+.main-container{
     width: 85%;
     height: 700px;
     margin:5% 10%;
 }
-/* ASIDE */
-aside{
+/* CONTAINER LEFT */
+.c-left{
     width:40%;
-    height:100%
 }
-/* HEADER-ASIDE */
+/* HEADER CONTAINER LEFT */
 .user-avatar{
     width: 35%;
     margin: 0.313rem;
     align-items:center;
 }
-/* MAIN-ASIDE */
-.main-aside{
+/* MAIN CONTAINER LEFT */
+.main-c-left{
     height: calc(100% - 60px);
     background-color: #fafafa;
     flex-direction: column;
@@ -98,21 +97,22 @@ aside{
     border-radius: 50%;
     align-items:center;
 }
-/* CHAT CONTAINER */
-.chat-container{
+/* CONTAINER-RIGHT */
+.c-right{
     width: 60%;
 }
-.name-chat{
+.info-chat{
     width:45%;
     margin: 0.313rem;
     align-items:center;
 }
-.name-chat img{
+.info-chat img{
     width:15%;
     border-radius: 50% ;
     margin-right: 0.625rem;
 }
-.chat{
+/* MAIN CONTAINER RIGHT */
+.main-c-right{
     height: calc(100% - 100px);
     background-image: url(../img/mine.jpg);
     padding: 2.5rem;
@@ -128,14 +128,15 @@ aside{
 .received{
     background-color: #fff;
 }
-.chat-footer{
+/* FOOTER CONTAINER RIGHT */
+.footer-c-right{
     height: 40px;
     justify-content: space-between;
     align-items: center;
     background-color: #f3eeea;
     padding: 0.625rem 2.5rem;
 }
-.chat-footer input{
+.footer-c-right input{
     width:80%;
     border: none;
     border-radius: 0.313rem;

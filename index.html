@@ -19,11 +19,11 @@
     <title>Boolzapp</title>
 </head>
 <body>
-    <div class=" container d-flex" id="app">
-        <!-- ASIDE -->
-        <aside>
-            <!-- HEADER ASIDE -->
-           <div class="header-aside d-flex">
+    <div class=" main-container d-flex" id="app">
+        <!-- CONTAINER LEFT -->
+        <div class="c-left">
+            <!-- HEADER CONTAINER LEFT -->
+           <div class="header-c-left d-flex">
               <div class="user-avatar d-flex">
                    <img src="img/avatar_io.jpg" alt="me-avatar">
                    <h3>Simona</h3>
@@ -34,9 +34,9 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
               </div>
            </div>
-           <!-- HEADER ASIDE END -->
-           <!-- MAIN ASIDE -->
-           <div class="main-aside d-flex">
+           <!-- HEADER CONTAINER LEFT END -->
+           <!-- MAIN CONTAINER LEFT -->
+           <div class="main-c-left d-flex">
               <div class="notification p-10 d-flex">
                   <div class="notification-icon p-10">
                       <i class="fa-solid fa-bell-slash"></i>
@@ -57,13 +57,14 @@
                  </div>
               </div>
            </div>
-           <!-- MAIN ASIDE END -->
-        </aside>
-        <!-- ASIDE END -->
-        <!-- CHAT CONTAINER -->
-        <div class="chat-container">
-            <div class="header-main d-flex">
-              <div class="name-chat d-flex">
+           <!-- MAIN CONTAINER LEFT END -->
+        </div>
+        <!-- CONTAINER LEFT END -->
+        <!-- CONTAINER RIGHT -->
+        <div class="c-right">
+            <!-- HEADER CONTAINER RIGHT -->
+            <div class="header-c-right d-flex">
+              <div class="info-chat d-flex">
                    <img src="img/avatar_1.jpg" alt="me-avatar">
                    <div class="text">
                        <h3>Michele</h3>
@@ -76,7 +77,9 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
-            <div class="chat">
+            <!-- HEADER CONTAINER RIGHT END -->
+            <!-- MAIN CONTAINER RIGHT -->
+            <div class="main-c-right">
                 <div class="message-container d-flex j-end">
                    <div class="message sent p-10">
                       <p> Hai portato a spasso il cane?</p> 
@@ -96,13 +99,16 @@
                   </div>
                 </div>
             </div>
-            <div class="chat-footer d-flex">
+            <!-- MAIN CONTAINER RIGHT END -->
+            <!-- FOOTER CONTAINER RIGHT -->
+            <div class="footer-c-right d-flex">
                 <i class="fa-regular fa-face-smile"></i>
                 <input type="text" placeholder="Scrivi un messaggio">
                 <i class="fa-solid fa-microphone"></i>
             </div>
+            <!-- FOOTER CONTAINER RIGHT END -->
         </div>
-        <!-- CHAT CONTAINER END -->
+        <!-- CONTAINER RIGHT END -->
     </div>
     <script src="js/main.js"></script>
 </body>
