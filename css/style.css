@@ -9,6 +9,7 @@ body{
     height: 100vh;
     font-family: 'Lato', sans-serif;
     background-image: linear-gradient( #009688 10%, #d5dbda 0%);
+    background-attachment: fixed ;
     padding: 30px;
 }
 .d-flex{
@@ -43,7 +44,7 @@ body{
 /* CONTAINER */
 .container{
     width: 85%;
-    height: 700px;
+    height: 550px;
     margin:auto;
 }
 /* COLUMN LEFT */
@@ -107,6 +108,7 @@ body{
 /* COLUMN RIGHT */
 .col-right{
     width: 60%;
+    flex-direction: column;
 }
 /* HEADER  RIGHT */
 .contact-avatar{
