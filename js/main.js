@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        activeContact:0,
         contacts: [
             {
               name: 'Michele',
@@ -167,5 +168,13 @@ const { createApp } = Vue
            }
        ]
     }
-}
+    },
+    showChat(){
+        const chatMessages ={
+            text: this.messages,
+        };
+        if (this.index === 0) {
+           this.contact[messages].push(chatMessages)
+        }
+    }
 }).mount('#app')
