@@ -169,12 +169,9 @@ const { createApp } = Vue
        ]
     }
     },
-    showChat(){
-        const chatMessages ={
-            text: this.messages,
-        };
-        if (this.index === 0) {
-           this.contact[messages].push(chatMessages)
+    methods:{
+        showMessages(index){
+            this.activeContact = index;
         }
     }
 }).mount('#app')

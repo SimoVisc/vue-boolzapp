@@ -55,7 +55,7 @@
             <!-- SEARCH BAR END -->
             <!-- CONTACTS -->
             <div class="contacts">
-                <div class="contact d-flex" v-for="(contact, index) in contacts" :class="{active: index === activeContact} ">
+                <div class="contact d-flex" v-for="(contact, index) in contacts" :class="{active: index === activeContact} " @click="showMessages">
                     <img :src=" `img/avatar${contact.avatar}.jpg`" alt="">
                     <div class="contact-text" >
                         {{ contact.name}}
