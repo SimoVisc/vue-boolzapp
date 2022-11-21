@@ -1,0 +1,13 @@
+:root {
+    --body-bg-color: linear-gradient( #009688 10%, #d5dbda 0%);
+    --header-bg-color:#eaeaea ;
+    --col-left-bg-color: #fafafa;
+    --notifications-color: #8edafc;
+    --notifications-a-color: gray;
+    --sent-message-color: #d5f9ba;
+    --footer-col-right-bg-color: #f3eeea;
+    --active-bg-color:#e9ebeb;
+    --light-gray: #b1b1b1;
+    --white: #fff;
+    
+  }

@@ -1,14 +1,18 @@
+/* VARIABLES */
+@import url(variables.css);
+
 /* RESET */
 *{
     box-sizing: border-box;
     margin:0;
     padding:0
 }
+
 /* COMMON */
 body{
     height: 100vh;
     font-family: 'Lato', sans-serif;
-    background-image: linear-gradient( #009688 10%, #d5dbda 0%);
+    background-image: var(--body-bg-color) ;
     background-attachment: fixed ;
     padding: 30px;
 }
@@ -27,19 +31,19 @@ body{
 .header-left, .header-right{
     justify-content: space-between;
     align-items: center;
-    background-color:#eaeaea ;
+    background-color: var(--header-bg-color) ;
 }
 .user-avatar img{
     width: 35%;
     border-radius: 50%;
 }
 .icons i{
-    color: #b1b1b1;
+    color: var(--light-gray);
     font-size: 1.25rem;
     margin-right: 0.625rem;
 }
 .last-logon{
-    color: #b1b1b1;
+    color: var(--light-gray);
 }
 /* CONTAINER */
 .container{
@@ -51,7 +55,7 @@ body{
 .col-left{
     width:40%;
     flex-direction: column;
-    background-color: #fafafa;
+    background-color: var(--col-left-bg-color);
 }
 
 /* HEADER LEFT */
@@ -66,24 +70,24 @@ body{
 }
 /* NOTIFICATIONS */
 .notification{
-    background-color: #8edafc;
+    background-color: var(--notifications-color) ;
 }
 .notification-icon{
     border-radius: 50%;
-    color: #8edafc;
-    background-color: #fff;
+    color: var(--notifications-color);
+    background-color: var(--white);
     margin-right:0.625rem;
 }
 .notification a{
-    color: gray;
+    color: var(--notifications-a-color);
 }
 /* SEARCH BAR */
 .search-bar{
-    background-color: #fff;
+    background-color: var(--white);
     margin:0.313rem;
 } 
 .search-bar i{
-    color: #b1b1b1;
+    color:var(--light-gray);
     padding: 2% 5%;
 }
 .search-bar input{
@@ -139,19 +143,19 @@ body{
     justify-content: flex-end;
 }
 .message-container.sent .message{
-    background-color: #d5f9ba;
+    background-color: var(--sent-message-color);
 }
 .message-container.received{
     justify-content: flex-start;
 }
 .message-container.received .message{
-    background-color: #fff;
+    background-color: var(--white);
 }
 .time{
    justify-content: end; 
    font-size: 12px;
    padding-top:2px;
-   color: #b9bfbb;
+   color: var(--light-gray);
 }
 .contact .time{
     width: 30%;
@@ -161,7 +165,7 @@ body{
     flex-shrink:0;
     justify-content: space-between;
     align-items: center;
-    background-color: #f3eeea;
+    background-color: var(--footer-col-right-bg-color);
     padding: 0.625rem 2.5rem;
 }
 .footer-col-right input{
@@ -171,5 +175,5 @@ body{
     padding: 0.313rem 0.625rem;
 }
 .active{
-    background-color:#e9ebeb;
+    background-color:var(--active-bg-color);
 }

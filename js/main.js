@@ -15,7 +15,7 @@ const { createApp } = Vue
         contacts: [
             {
               name: 'Michele',
-              avatar: '_1',
+              avatar: '_1', 
               visible: true,
               messages: [
                   {
