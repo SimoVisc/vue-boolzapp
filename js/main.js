@@ -4,8 +4,13 @@ const { createApp } = Vue
     data() {
       return {
         activeContact:0,
+        answerMessage:{
+            text: 'ok!',
+            status: 'received',
+        },
         newMessage:{
-            text: "",
+            date: '15/01/2020 19:13:00',
+            message: '',
             status: 'sent'
         },
         contacts: [
@@ -178,10 +183,19 @@ const { createApp } = Vue
             this.activeContact = i;
         },
         newText(){
-            newObjMessage = this.newMessage;
+            const newObjMessage = {
+                date: '15/01/2020 19:13:00',
+                message: this.newMessage.text,
+                status: 'sent'
+            }
             this.contacts[this.activeContact].messages.push(newObjMessage);
             this.NewMessage=""
         },
-
+        addAnswer(){
+            answerMessage
+        }
+        // setTimeout((addAnswer)=>{
+        //     this.newText()
+        //  },1000);
     }
 }).mount('#app')
