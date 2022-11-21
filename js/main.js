@@ -182,7 +182,7 @@ const { createApp } = Vue
                text: this.textNewMessage
             };
             this.contacts[this.activeContact].messages.push(newObjMessage);
-            this.textNewMessage
+            this.textNewMessage=""
         }
     }
     
