@@ -55,9 +55,9 @@
             <!-- SEARCH BAR END -->
             <!-- CONTACTS -->
             <div class="contacts">
-                <div class="contact d-flex" v-for="(contact, index) in contacts" :class="{active: index === activeContact} " @click="showMessages">
+                <div class="contact activeContact d-flex " v-for="(contact, index) in contacts" :class="{active: index === 0} ">
                     <img :src=" `img/avatar${contact.avatar}.jpg`" alt="">
-                    <div class="contact-text" >
+                    <div class="contact-text " >
                         {{ contact.name}}
                         <p class="last-logon">Ultimo messaggio inviato</p>
                     </div>
@@ -88,9 +88,9 @@
             <!-- MESSAGES -->
             <div class="messages">
                <div class="message-container d-flex " v-for="message in contacts[activeContact].messages" :class="message.status">
-                   <div class="message p-10">
-                       <p> {{ message.message}}</p> 
-                       <small class="time d-flex j-end ">12:00</small>
+                   <div class="message p-10" >
+                       <p> {{ message.message }} </p> 
+                       <span>12:00</span>
                    </div>
               </div>
             </div>
