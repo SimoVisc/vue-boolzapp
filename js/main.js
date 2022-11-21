@@ -5,7 +5,7 @@ const { createApp } = Vue
       return {
         activeContact:0,
         newMessage:{
-            text: ''
+            text: "",
         },
         contacts: [
             {
@@ -173,13 +173,17 @@ const { createApp } = Vue
     }
     },
     methods:{
-        newMessage(){
+        showActiveContact(i){
+            this.activeContact = i;
+            
+        },
+        newText(){
             const newObjMessage ={
-               text: this.textNewMessage,
+               text: this.textNewMessage
             };
-            this.contacts[this.activeContact].messages.push(newObjMessage)
-           },
-        
+            this.contacts[this.activeContact].messages.push(newObjMessage);
+            this.textNewMessage
+        }
     }
     
 }).mount('#app')

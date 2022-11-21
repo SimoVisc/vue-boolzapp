@@ -96,7 +96,7 @@ body{
     flex-grow: 1;
     overflow-y:auto;
 }
-.contact{
+.contact {
     align-items: center;
 }
 .contact img{
@@ -132,7 +132,7 @@ body{
 }
 .message{
     margin:0.625rem;
-    width: 50%;
+    width: 60%;
     border-radius: 0.625rem;
 } 
 .message-container.sent{
@@ -146,6 +146,15 @@ body{
 }
 .message-container.received .message{
     background-color: #fff;
+}
+.time{
+   justify-content: end; 
+   font-size: 12px;
+   padding-top:2px;
+   color: #b9bfbb;
+}
+.contact .time{
+    width: 30%;
 }
 /* FOOTER COLUMN RIGHT */
 .footer-col-right{

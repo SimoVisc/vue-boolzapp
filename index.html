@@ -55,13 +55,19 @@
             <!-- SEARCH BAR END -->
             <!-- CONTACTS -->
             <div class="contacts">
-                <div class="contact activeContact d-flex " v-for="(contact, index) in contacts" :class="{active: index === 0} ">
+                <div 
+                  v-for="(contact, index) in contacts" 
+                  class="contact activeContact d-flex "  
+                 :class="{active: index === activeContact} " 
+                 @click="showActiveContact(index)">
                     <img :src=" `img/avatar${contact.avatar}.jpg`" alt="">
                     <div class="contact-text " >
                         {{ contact.name}}
                         <p class="last-logon">Ultimo messaggio inviato</p>
                     </div>
+                    <div class="time d-flex">12:00</div>
                 </div>
+                
             </div>
            <!-- CONTACTS END -->
         </div>
@@ -71,10 +77,10 @@
         <div class="col-right d-flex">
             <!-- HEADER  RIGHT -->
             <div class="header-right h-60 d-flex">
-              <div class="contact-avatar d-flex">
-                   <img src="img/avatar_1.jpg" alt="me-avatar">
+              <div  class="contact-avatar d-flex">
+                   <img :src=" `img/avatar${contacts[activeContact].avatar}.jpg`" alt="me-avatar">
                    <div class="text">
-                       <h3>Michele</h3>
+                       <h3 >{{contacts[activeContact].name}}</h3>
                        <p class="last-logon">Ultimo accesso oggi alle 12:00</p>
                    </div>
               </div>
@@ -89,19 +95,19 @@
             <div class="messages">
                <div class="message-container d-flex " v-for="message in contacts[activeContact].messages" :class="message.status">
                    <div class="message p-10" >
-                       <p> {{ message.message }} </p> 
-                       <span>12:00</span>
+                       <span> {{ message.message }} </span> 
+                       <span class="time d-flex">12:00</span>
                    </div>
               </div>
             </div>
             <!-- MESSAGES END -->
 
             <!-- FOOTER COLUMN RIGHT -->
-            <div class="footer-col-right d-flex">
+            <form class="footer-col-right d-flex" @submit.prevent="newText">
                 <i class="fa-regular fa-face-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage.text">
                 <i class="fa-solid fa-microphone"></i>
-            </div>
+            </form>
             <!-- FOOTER COLUMN RIGHT END -->
         </div>
         <!-- CONTAINER RIGHT END -->
