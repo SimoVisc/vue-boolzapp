@@ -176,16 +176,11 @@ const { createApp } = Vue
     methods:{
         showActiveContact(i){
             this.activeContact = i;
-            
         },
         newText(){
-            const newObjMessage ={
-               text: this.textNewMessage,
-               status: this.statusNewMessage
-            };
+            newObjMessage = this.newMessage;
             this.contacts[this.activeContact].messages.push(newObjMessage);
-            this.textNewMessage=""
+            this.NewMessage=""
         }
     }
-    
 }).mount('#app')
