@@ -23,8 +23,8 @@
         <!-- COLUMN LEFT -->
         <div class="col-left d-flex">
             <!-- HEADER-LEFT -->
-           <div class="header-left h-60 d-flex ">
-              <div class="user-avatar d-flex">
+           <div class="header-left d-flex a-center h-60px ">
+              <div class="user-avatar d-flex a-center">
                    <img src="img/avatar_io.jpg" alt="me-avatar">
                    <h3>Simona</h3>
               </div>
@@ -37,8 +37,8 @@
            </div>
            <!-- HEADER LEFT END -->
            <!-- NOTIFICATIONS -->
-            <div class="notification h-60 p-10 d-flex">
-              <div class="notification-icon p-10">
+            <div class="notification h-60px p-10px d-flex">
+              <div class="notification-icon p-10px">
                     <i class="fa-solid fa-bell-slash"></i>
               </div>
               <div class="notification-text">
@@ -57,15 +57,16 @@
             <div class="contacts">
                 <div 
                   v-for="(contact, index) in contacts" 
-                  class="contact activeContact d-flex "  
+                  class="contact activeContact d-flex a-center "  
                  :class="{active: index === activeContact} " 
-                 @click="showActiveContact(index)">
-                    <img :src=" `img/avatar${contact.avatar}.jpg`" alt="">
+                 @click="showActiveContact(index)"
+                 >
+                    <img :src=" `img/avatar${contact.avatar}.jpg`" alt="avatar" class="a-center">
                     <div class="contact-text " >
                         {{ contact.name}}
                         <p class="last-logon">Ultimo messaggio inviato</p>
                     </div>
-                    <div class="time d-flex">12:00</div>
+                    <div class="time d-flex j-end">12:00</div>
                 </div>
                 
             </div>
@@ -76,8 +77,8 @@
         <!-- COLUMN RIGHT -->
         <div class="col-right d-flex">
             <!-- HEADER  RIGHT -->
-            <div class="header-right h-60 d-flex ">
-              <div  class="contact-avatar d-flex">
+            <div class="header-right d-flex a-center h-60px ">
+              <div  class="contact-avatar d-flex a-center">
                    <img :src=" `img/avatar${contacts[activeContact].avatar}.jpg`" alt="me-avatar">
                    <div class="text">
                        <h3 >{{contacts[activeContact].name}}</h3>
@@ -94,16 +95,16 @@
             <!-- MESSAGES -->
             <div class="messages">
                <div class="message-container d-flex " v-for="message in contacts[activeContact].messages" :class="message.status">
-                   <div class="message p-10" >
+                   <div class="message p-10px" >
                        <span > {{ message.message }} </span> 
-                       <span class="time d-flex">12:00</span>
+                       <span class="time d-flex j-end">12:00</span>
                    </div>
               </div>
             </div>
             <!-- MESSAGES END -->
 
             <!-- FOOTER COLUMN RIGHT -->
-            <form class="footer-col-right d-flex" @submit.prevent="newText">
+            <form class="footer-col-right d-flex a-center" @submit.prevent="newText">
                 <i class="fa-regular fa-face-smile"></i>
                 <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage.text" required >
                 <i class="fa-solid fa-microphone"></i>
