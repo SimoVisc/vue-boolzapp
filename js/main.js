@@ -6,6 +6,7 @@ const { createApp } = Vue
         activeContact:0,
         newMessage:{
             text: "",
+            status: 'sent'
         },
         contacts: [
             {
@@ -179,7 +180,8 @@ const { createApp } = Vue
         },
         newText(){
             const newObjMessage ={
-               text: this.textNewMessage
+               text: this.textNewMessage,
+               status: this.statusNewMessage
             };
             this.contacts[this.activeContact].messages.push(newObjMessage);
             this.textNewMessage=""
