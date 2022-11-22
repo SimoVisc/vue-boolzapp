@@ -28,7 +28,6 @@
                    <img src="img/avatar_io.jpg" alt="me-avatar">
                    <h3>Simona</h3>
               </div>
-              
               <div class="icons d-flex">
                   <i class="fa-solid fa-circle-notch"></i>
                   <i class="fa-solid fa-message"></i>
@@ -37,7 +36,7 @@
            </div>
            <!-- HEADER LEFT END -->
            <!-- NOTIFICATIONS -->
-            <div class="notification h-60px p-10px d-flex">
+            <div class="notification d-flex h-60px p-10px ">
               <div class="notification-icon p-10px">
                     <i class="fa-solid fa-bell-slash"></i>
               </div>
@@ -56,8 +55,8 @@
             <!-- CONTACTS -->
             <div class="contacts">
                 <div 
-                  v-for="(contact, index) in contacts" 
-                  class="contact activeContact d-flex a-center "  
+                 v-for="(contact, index) in contacts" 
+                 class="contact activeContact d-flex a-center "  
                  :class="{active: index === activeContact} " 
                  @click="showActiveContact(index)"
                  >
@@ -73,7 +72,6 @@
            <!-- CONTACTS END -->
         </div>
         <!-- CONTAINER LEFT END -->
-
         <!-- COLUMN RIGHT -->
         <div class="col-right d-flex">
             <!-- HEADER  RIGHT -->
@@ -94,7 +92,10 @@
             <!-- HEADER CONTAINER RIGHT END -->
             <!-- MESSAGES -->
             <div class="messages">
-               <div class="message-container d-flex " v-for="message in contacts[activeContact].messages" :class="message.status">
+               <div 
+                 v-for="message in contacts[activeContact].messages" 
+                 class="message-container d-flex " 
+                 :class="message.status">
                    <div class="message p-10px" >
                        <span > {{ message.message }} </span> 
                        <span class="time d-flex j-end">12:00</span>

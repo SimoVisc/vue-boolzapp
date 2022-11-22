@@ -129,7 +129,7 @@ body{
     background-image: url(../img/mine.jpg);
     flex-grow:1;
     overflow-y: auto;
-    padding: 3.125rem 5rem;
+    padding: 5rem;
 }
 .messages > .message-container:not(:last-child){
     margin-bottom: 0.625rem;
@@ -138,6 +138,7 @@ body{
     width: 60%;
     border-radius: 0.625rem;
     margin:0.625rem;
+    padding: 0.625rem; 
 } 
 .message-container.sent{
     justify-content: flex-end;
@@ -154,7 +155,7 @@ body{
 .time{
    color: var(--light-gray);
    font-size: 0.75rem;
-   padding-top:0.75rem;
+   padding-top:0.313rem;
 }
 .contact .time{
     width: 30%;
