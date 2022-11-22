@@ -200,8 +200,9 @@ const { createApp } = Vue
               },1000);
         }, 
         searchContact(){
+            
             if (contact === searchText ) {
-                console.log(this.searchText)
+                this.contact.push(searchText);
             }
             
         }
