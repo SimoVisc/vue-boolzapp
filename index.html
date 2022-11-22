@@ -47,10 +47,10 @@
             </div>
             <!-- NOTIFICATIONS END -->
             <!-- SEARCH BAR -->
-            <div class="search-bar d-flex" >
+            <form class="search-bar d-flex" >
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
-            </div>
+                <input type="text" placeholder="Cerca o inizia una nuova chat" @keyup="searchContact">
+            </form>
             <!-- SEARCH BAR END -->
             <!-- CONTACTS -->
             <div class="contacts">
@@ -59,6 +59,7 @@
                  class="contact activeContact d-flex a-center "  
                  :class="{active: index === activeContact} " 
                  @click="showActiveContact(index)"
+                 v-show="contact === true"
                  >
                     <img :src=" `img/avatar${contact.avatar}.jpg`" alt="avatar" class="a-center">
                     <div class="contact-text " >

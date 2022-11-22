@@ -50,7 +50,7 @@ body{
 /* CONTAINER */
 .container{
     width: 85%;
-    height: 34.375rem;
+    height: 100%;
     margin:auto;
 }
 /* COLUMN LEFT */

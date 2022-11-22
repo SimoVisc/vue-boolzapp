@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         activeContact:0,
+        searchText: "",
         answerMessage:{
             text: 'ok!',
             status: 'received'
@@ -197,6 +198,12 @@ const { createApp } = Vue
             }
                 this.contacts[this.activeContact].messages.push(newObjMessageAnswer);
               },1000);
-        },  
+        }, 
+        searchContact(){
+            if (contact === searchText ) {
+                console.log(this.searchText)
+            }
+            
+        }
     }
 }).mount('#app')
